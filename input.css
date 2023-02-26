@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.form {
+  @apply bg-[#42484d] rounded-lg px-6 py-4 grid grid-cols-2 gap-x-6 gap-y-2 mb-4;
+}
+
+.form.hidden {
+  @apply transform -translate-y-8 h-0 py-0 px-5 mb-0 opacity-0;
+}
+
+.form__row {
+  @apply flex items-center;
+}
+
+.form__label {
+  @apply flex grow-0 shrink-0  text-sm md:text-base  basis-1/2 font-bold text-gray-100;
+}
+
+.form__input {
+  @apply w-full py-1 px-3 font-sans text-sm border-none rounded-sm bg-zinc-300;
+}
